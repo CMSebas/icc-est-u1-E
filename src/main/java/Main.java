@@ -10,7 +10,7 @@ public class Main {
         do {
             System.out.println("Introduzca la opcion que deseas:");
             opcion = leer.nextInt();
-            if (opcion>0 && opcion<=3) {
+            if (opcion>0 && opcion<=4) {
                 aux=true;
             }else {
                 aux=false;
@@ -22,7 +22,7 @@ public class Main {
             case 1:
                 System.out.println("Introduzca el numero del que quieres ver la suma de numeros consecutivos");
                 int num = leer.nextInt();
-                int resultado1= ejercicios.Ejercicio1(1,num);
+                int resultado1= ejercicios.sumaConsecutivos(num);
                 System.out.println("");
                 System.out.println("EL RESULTADO DE LA SUMA ES DE "+resultado1);
                 break;
@@ -41,6 +41,12 @@ public class Main {
                         int resultado3=ejercicios.Ejercicio3(num2);
                         System.out.println("");
                         System.out.println("La suma de sus digitos es de "+resultado3);
+                        break;
+                    case 4:
+                        System.out.println("Introduce el numero de la poscion que quieres ver de la serie de Fibonacci ");
+                        int num3 = leer.nextInt();
+                        int resultado4=ejercicios.fibonacci(num3);
+                        System.out.println("La fibonacci es de "+resultado4);
                         break;
                         default:
                             System.out.println("Opcion no valida: Intentalo otra vez: ");
